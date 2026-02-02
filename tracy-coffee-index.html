@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Cards</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #6b4e31;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .coffee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .coffee-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .coffee-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .coffee-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .coffee-name {
+      font-size: 1.5rem;
+      color: #4a5568;
+      margin-bottom: 0.5rem;
+    }
+
+    .font-green {
+      color: #48bb78;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #6b4e31 0%, #8b4513 100%);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(107, 78, 49, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1>All Coffees</h1>
+  <div class="coffee-grid">
+    <div class="coffee-card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300" alt="Espresso">
+      <h2 class="coffee-name">Espresso</h2>
+      <p><strong class="font-green">Roast:</strong> Dark</p>
+      <p><strong class="font-green">Description:</strong> Bold Italian classic, rich crema.</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <!-- Add more cards as needed -->
+  </div>
+</body>
+</html>
